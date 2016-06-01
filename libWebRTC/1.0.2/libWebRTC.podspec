@@ -33,6 +33,7 @@ webrtc(google opensource) is p2p video chat framework
     'OTHER_LDFLAGS' => '-ObjC'
   }
   s.source_files = [
+    "Pod/lib/WebRTC.framework/Headers/**/*.h",
     "Pod/webrtc/video_frame.h", 
     "Pod/webrtc/typedefs.h",
     "Pod/webrtc/common_types.h",
@@ -44,6 +45,9 @@ webrtc(google opensource) is p2p video chat framework
     "Pod/webrtc/system_wrappers/include/*.h",
     ]
   s.vendored_frameworks = "Pod/lib/WebRTC.framework"
+  s.public_header_files = [
+    "Pod/lib/WebRTC.framework/Headers/**/*.h", 
+    ]
   s.library = 'icucore','c++','stdc++.6','sqlite3'
   s.frameworks = 'UIKit','Security','CFNetwork','GLKit','AudioToolbox','AVFoundation','CoreAudio','CoreMedia','CoreVideo','CoreGraphics','OpenGLES','QuartzCore'
   s.module_name = 'libWebRTC'
