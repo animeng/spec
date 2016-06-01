@@ -23,12 +23,12 @@ webrtc(google opensource) is p2p video chat framework
   s.homepage         = 'https://github.com/animeng/libWebRTC'
   s.license          = 'MIT'
   s.author           = { 'wang animeng' => 'animeng68@gmail.com' }
-  s.source           = { :git => 'https://github.com/huibin1984/libWebRTC.git' }
+  s.source           = { :git => 'https://github.com/animeng/libWebRTC.git' }
   s.social_media_url = 'http://weibo.com/mengtnt'
   s.platform     = :ios, "8.0"
 
   s.xcconfig = { 
-    'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Pod/**"', 
+    'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/libWebRTC/Pod"', 
     'GCC_PREPROCESSOR_DEFINITIONS' => "WEBRTC_POSIX LOGGING=1 FEATURE_ENABLE_SSL SYSTEM_NATIVELY_SIGNALS_MEMORY_PRESSURE IOS WEBRTC_IOS CARBON_DEPRECATED=YES USE_OPENSSL=1 NDEBUG NVALGRIND",
     'OTHER_LDFLAGS' => '-ObjC'
   }
@@ -45,9 +45,6 @@ webrtc(google opensource) is p2p video chat framework
     "Pod/webrtc/system_wrappers/include/*.h",
     ]
   s.vendored_frameworks = "Pod/lib/WebRTC.framework"
-  s.public_header_files = [
-    "Pod/lib/WebRTC.framework/Headers/**/*.h", 
-    ]
   s.library = 'icucore','c++','stdc++.6','sqlite3'
   s.frameworks = 'UIKit','Security','CFNetwork','GLKit','AudioToolbox','AVFoundation','CoreAudio','CoreMedia','CoreVideo','CoreGraphics','OpenGLES','QuartzCore'
   s.module_name = 'libWebRTC'
