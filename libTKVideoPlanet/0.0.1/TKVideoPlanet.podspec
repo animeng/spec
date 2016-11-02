@@ -91,10 +91,10 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "TKVideoPlanet", "TKVideoPlanet/**/*.{h,m}"
+  s.source_files  = "TKVideoPlanet", "include/TKVideoPlanet/**/*.{h,m}"
   # s.exclude_files = "TKVideoPlanet/Exclude"
 
-  s.public_header_files = "TKVideoPlanet/**/*.h"
+  s.public_header_files = "include/TKVideoPlanet/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -106,7 +106,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  s.resources = "TKVideoPlanet/*.png"
+  # s.resources = "TKVideoPlanet/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -123,7 +123,7 @@ Pod::Spec.new do |s|
   # s.library   = "iconv"
   s.libraries = "libstdc++", "libicucore"
 
-  s.vendored_libraries = "libTKVideoPlanet.a"
+  s.vendored_libraries = "libTKVideoPlanet"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
