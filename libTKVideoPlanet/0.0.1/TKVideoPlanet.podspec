@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "gogs@gogs.geekint.com:bruce/planet-sdk-objc.git" }
+  s.source       = { :git => "https://github.com/animeng/TKVideoPlanet" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
