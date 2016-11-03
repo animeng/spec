@@ -120,9 +120,9 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  s.frameworks = 'GLKit', 'AudioToolbox', 'CFNetwork', 'VideoToolbox',"libstdc++", "libicucore"
+  s.frameworks = 'GLKit', 'AudioToolbox', 'CFNetwork', 'VideoToolbox'
 
-  # s.library   = "iconv"
+  s.libraries   = "libstdc++","libicucore"
 
   s.vendored_libraries = "libTKVideoPlanet.a"
 
