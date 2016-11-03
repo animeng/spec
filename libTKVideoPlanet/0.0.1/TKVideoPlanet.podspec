@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
+  s.license          = 'MIT'
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "git@github.com/animeng/TKVideoPlanet.git" }
+  s.source       = { :git => "https://github.com/animeng/TKVideoPlanet",:tag => '0.0.1' }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,7 +91,9 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "TKVideoPlanet", "include/TKVideoPlanet/**/*.{h,m}"
+  s.source_files = [
+    "include/TKVideoPlanet/**/*.h"
+    ]
   # s.exclude_files = "TKVideoPlanet/Exclude"
 
   s.public_header_files = "include/TKVideoPlanet/**/*.h"
@@ -118,12 +120,11 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  s.frameworks = 'GLKit', 'AudioToolbox', 'CFNetwork', 'VideoToolbox'
+  s.frameworks = 'GLKit', 'AudioToolbox', 'CFNetwork', 'VideoToolbox',"libstdc++", "libicucore"
 
   # s.library   = "iconv"
-  s.libraries = "libstdc++", "libicucore"
 
-  s.vendored_libraries = "libTKVideoPlanet"
+  s.vendored_frameworks = "libTKVideoPlanet.a"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -137,7 +138,7 @@ Pod::Spec.new do |s|
   s.module_name = 'TKVideoPlanet'
 
   s.xcconfig = { 
-    'OTHER_LDFLAGS' => '-ObjC'
+    'OTHER_LDFLAGS' => '-ObjC',
     'ENABLE_BITCODE' => 'NO'
   }
 
