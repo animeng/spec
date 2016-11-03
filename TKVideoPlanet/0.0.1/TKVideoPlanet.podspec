@@ -124,7 +124,7 @@ Pod::Spec.new do |s|
 
   # s.library   = "iconv"
 
-  s.vendored_frameworks = "libTKVideoPlanet.a"
+  s.vendored_libraries = "libTKVideoPlanet.a"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
