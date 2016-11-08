@@ -81,7 +81,7 @@ Pod::Spec.new do |s|
   #
 
 #s.source       = { :git => "https://github.com/animeng/TKVideoPlanet",:tag => '0.0.1' }
-  s.source           ={ :git => "https://github.com/BuddyTechnology/planet-sdk-objc.git"}
+  s.source           ={ :git => "https://github.com/BuddyTechnology/planet-sdk-objc.git" :branch => 'master'}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
