@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                   Tiki的视频通话
+                   Tiki的视频通话SDK
                    DESC
 
   s.homepage     = "http://live.tikiapp.im/"
@@ -80,7 +80,8 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/animeng/TKVideoPlanet",:tag => '0.0.1' }
+#s.source       = { :git => "https://github.com/animeng/TKVideoPlanet",:tag => '0.0.1' }
+  s.source           ={ :git => "https://github.com/BuddyTechnology/planet-sdk-objc.git"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -92,11 +93,11 @@ Pod::Spec.new do |s|
   #
 
   s.source_files = [
-    "include/TKVideoPlanet/**/*.h"
+    "sdk/include/TKVideoPlanet/**/*.h"
     ]
   # s.exclude_files = "TKVideoPlanet/Exclude"
 
-  s.public_header_files = "include/TKVideoPlanet/**/*.h"
+  s.public_header_files = "sdk/include/TKVideoPlanet/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -124,7 +125,7 @@ Pod::Spec.new do |s|
 
   s.libraries   = "stdc++","icucore"
 
-  s.vendored_libraries = "libTKVideoPlanet.a"
+  s.vendored_libraries = "sdk/libTKVideoPlanet.a"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -141,5 +142,10 @@ Pod::Spec.new do |s|
     'OTHER_LDFLAGS' => '-ObjC',
     'ENABLE_BITCODE' => 'NO'
   }
+
+s.dependency 'AFNetworking', '~> 3.1'
+s.dependency 'ReactiveCocoa', '~> 2.5'
+s.dependency 'Masonry', '~> 1.0.2'
+s.dependency 'SocketRocket','~> 0.5.1'
 
 end
