@@ -22,7 +22,7 @@
 
 Pod::Spec.new do |s|
   s.name     = 'grpcCorePatch'
-  version = '1.14.1-patch'
+  version = '1.14.1'
   s.version  = version
   s.summary  = 'Core cross-platform gRPC library, written in C'
   s.homepage = 'https://grpc.io'
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
 
   s.source = {
     :git => 'https://github.com/animeng/grpc.git',
-    :tag => "v#{version}",
+    :tag => "1.14.1-patch",
   }
 
   # gRPC podspecs depend on fix for https://github.com/CocoaPods/CocoaPods/issues/6024,

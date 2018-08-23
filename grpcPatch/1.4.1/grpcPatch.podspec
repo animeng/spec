@@ -20,7 +20,7 @@
 
 Pod::Spec.new do |s|
   s.name     = 'grpcPatch'
-  version = '1.14.1-patch'
+  version = '1.14.1'
   s.version  = version
   s.summary  = 'gRPC client library for iOS/OSX'
   s.homepage = 'https://grpc.io'
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
 
   s.source = {
     :git => 'https://github.com/animeng/grpc.git',
-    :tag => "v#{version}",
+    :tag => "1.14.1-patch",
   }
 
   s.ios.deployment_target = '7.0'
